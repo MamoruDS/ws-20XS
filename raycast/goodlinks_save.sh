@@ -3,7 +3,7 @@
 # @raycast.schemaVersion 1
 # @raycast.title GoodLinks Save
 # @raycast.author MamoruDS <mamoruds.io@gmail.com>
-# @raycast.authorURL https://github.com/MamoruDS/ws-20XS
+# @raycast.authorURL https://github.com/MamoruDS/ws-20XS/tree/raycast/raycast
 # @raycast.description Save URL from your clipboard to GoodLinks by using url-scheme
 
 # @raycast.mode compact
