@@ -12,10 +12,9 @@
 # @raycast.packageName MSScript
 # @raycast.argument1 { "type": "text", "placeholder": "tags" }
 
-# change to true as default value
-
-version=0.1.0
-quick_save=false
+version=0.1.1
+# To enable quick sive, uncomment line below
+# quick_save=true
 
 if [ ! -z $RAYCAST_CONFIG ]; then
     config=$RAYCAST_CONFIG/goodlinks_save.config
