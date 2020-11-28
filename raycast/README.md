@@ -1,12 +1,13 @@
 # Raycast Scripts
 
-## Configuration
+## Usage
 
-Add config storage location as environment variable `RAYCAST_CONFIG`
-
-```shell
-# your .zshrc
-export RAYCAST_CONFIG=$HOME/.config/raycast
-```
-
-_PS_. Since i haven't finger out how Raycast working with `ENV`, configuration may not working at all, try to change default of configable variables in script manually
+-   Download script ends with `.sh` to your Raycast script directory
+-   Create new folder at `$HOME/.config` called `raycast`
+    ```shell
+    mkdir -p ~/.config/raycast
+    ```
+-   Create new folder called `scripts` to store additional scripts in folder which created on previous step
+    ```shell
+    mkdir -p ~/.config/raycast/scripts
+    ```

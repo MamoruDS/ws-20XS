@@ -12,17 +12,15 @@
 # @raycast.packageName MSScript
 # @raycast.argument1 { "type": "text", "placeholder": "tags" }
 
-version=0.1.1
-# To enable quick sive, uncomment line below
-# quick_save=true
+version=0.1.2
+CONFIG=$HOME/.config/raycast
+config=$CONFIG/goodlinks_save.config
+# To enable quick sive, change `quick_save=` in your config
 
-if [ ! -z $RAYCAST_CONFIG ]; then
-    config=$RAYCAST_CONFIG/goodlinks_save.config
-    if test -f "$config"; then
-        source $config
-    else
-        echo "quick_save=false" >$config
-    fi
+if test -f "$config"; then
+    source $config
+else
+    echo "quick_save=false" >$config
 fi
 
 # echo "ENV: $RAYCAST_CONFIG"
