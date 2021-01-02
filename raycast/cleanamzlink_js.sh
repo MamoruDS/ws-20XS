@@ -18,7 +18,7 @@ RT=node
 # To using nvm, uncomment line below
 # RT=$NVM_DIR/versions/node/$NVM_CUR_VERSION/bin/node
 # To using deno, uncomment line below
-# RT=deno
+# RT="deno run"
 
 # echo $SCRIPT/cleanamzlink.js
 link=$($RT $SCRIPT/cleanamzlink.js $(pbpaste))
