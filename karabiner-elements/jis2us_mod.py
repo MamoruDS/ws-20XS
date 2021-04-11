@@ -3,9 +3,9 @@ from key_mod import Mod
 from key_types import ModifierFrom
 
 from_mod_shift = ModifierFrom(["shift"], ["caps_lock"])
-
+from_common = ModifierFrom([], ["caps_lock"])
 m = Mod("WS-20XS")
-sub = m.add_rule("JIS->US (generated")
+sub = m.add_rule("JIS->US (generated", from_common)
 sub.add("1", "!", from_mod_shift)
 sub.add("2", "@", from_mod_shift)
 sub.add("3", "#", from_mod_shift)
