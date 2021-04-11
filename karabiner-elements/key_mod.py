@@ -1,5 +1,5 @@
 import json
-from typing import Any, Dict, List, Literal
+from typing import Any, Dict, List, Literal, Union
 
 from key_types import KeyCode, ModifierFrom, KeySymbol
 from key_mapping import jis_keys
@@ -8,10 +8,16 @@ from key_mapping import jis_keys
 class Rule(Dict):
     desc: str
     sub_rules: List[Dict[str, Any]]
+    default_modifier: Union[None, ModifierFrom]
 
-    def __init__(self, description: str):
+    def __init__(
+        self,
+        description: str,
+        default_modifier: ModifierFrom = None,
+    ):
         self.desc = description
         self.sub_rules = []
+        self.default_modifier = default_modifier
 
     def add(
         self,
@@ -27,6 +33,10 @@ class Rule(Dict):
             key_from[
                 "modifiers"
             ] = from_modifiers.data()
+        elif self.default_modifier != None:
+            key_from[
+                "modifiers"
+            ] = self.default_modifier.data()
         data = {
             "from": key_from,
             "to": [],
@@ -45,8 +55,15 @@ class Mod(Dict):
         self.title = title
         self.rules = []
 
-    def add_rule(self, description: str) -> Rule:
-        _rule = Rule(description)
+    def add_rule(
+        self,
+        description: str,
+        default_modifiers: ModifierFrom = None,
+    ) -> Rule:
+        _rule = Rule(
+            description,
+            default_modifier=default_modifiers,
+        )
         self.rules.append(_rule)
         return _rule
 
