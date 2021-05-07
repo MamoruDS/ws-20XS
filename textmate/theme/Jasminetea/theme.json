@@ -4,7 +4,6 @@
     "name": "Jasminetea",
     "uuid": "CF231F8F-B884-4E14-A7C7-ED07DFA1E35A",
     "settings": {
-        // "background": "#0C0C0D",
         "background": "#19191C",
         "foreground": "#FFFFFF",
         "caret": "#33323B",
@@ -16,7 +15,7 @@
                 "name": "comment",
                 "scope": "comment",
                 "prop": {
-                    "foreground": "g.cc_GY",
+                    "foreground": "g.cc_GY"
                 }
             },
             {
@@ -29,88 +28,87 @@
                     "punctuation.section.brackets",
                     "punctuation.definition.block",
                     "punctuation.definition.parameters",
-                    "meta.brace",
+                    "meta.brace"
                 ],
                 "prop": {
-                    "foreground": "g.ccBCY",
+                    "foreground": "g.ccBCY"
                 }
             },
             {
                 "name": "other-punctuation",
                 "scope": [
                     "punctuation.section.block",
-                    "punctuation.separator.arguments",
+                    "punctuation.separator.arguments"
                 ],
                 "prop": {
-                    "foreground": "g.ccBCY",
+                    "foreground": "g.ccBCY"
                 }
             },
             {
                 "name": "string",
                 "scope": "string",
                 "prop": {
-                    "foreground": "g.ccBGN",
+                    "foreground": "g.ccBGN"
                 }
             },
             {
                 "name": "number",
                 "scope": "constant.numeric",
                 "prop": {
-                    "foreground": "g.ccBRD",
+                    "foreground": "g.ccBRD"
                 }
             },
             {
                 "name": "boolean",
                 "scope": "constant.language.boolean",
                 "prop": {
-                    "foreground": "g.cc_OR",
+                    "foreground": "g.cc_OR"
                 }
             },
             {
                 "name": "built-in constant OR",
                 "scope": [
                     "constant.language.null",
-                    "constant.language.python", // -> None
+                    "constant.language.python"
                 ],
                 "prop": {
-                    "foreground": "g.cc_OR",
+                    "foreground": "g.cc_OR"
                 }
             },
             {
                 "name": "built-in constant BM",
                 "scope": [
                     "constant.language.undefined",
-                    "constant.language.null.ts",
+                    "constant.language.null.ts"
                 ],
                 "prop": {
-                    "foreground": "g.ccBM_",
+                    "foreground": "g.ccBM_"
                 }
             },
             {
                 "name": "operator-OR",
                 "scope": [
-                    "keyword.operator.new",
+                    "keyword.operator.new"
                 ],
                 "prop": {
-                    "foreground": "g.cc_OR",
+                    "foreground": "g.cc_OR"
                 }
             },
             {
                 "name": "function",
                 "scope": "entity.name.function",
                 "prop": {
-                    "foreground": "g.ccBBL",
+                    "foreground": "g.ccBBL"
                 }
             },
             {
                 "name": "class",
-                // "scope": "entity.name.class",
                 "scope": [
                     "entity.other.inherited-class",
-                    "entity.name.type.class",
+                    "entity.name.type.class"
                 ],
                 "prop": {
-                    "foreground": "g.ccBYL",
+                    "foreground": "g.ccBYL"
                 }
             },
             {
@@ -118,49 +116,47 @@
                 "scope": [
                     "entity.name.type",
                     "meta.type.parameters",
-                    "meta.type.annotation",
-                    // "support.type"
+                    "meta.type.annotation"
                 ],
                 "prop": {
-                    "foreground": "g.ccBBL",
+                    "foreground": "g.ccBBL"
                 }
             },
             {
                 "name": "arrow",
                 "scope": "meta.arrow",
                 "prop": {
-                    "foreground": "g.ccBM_",
+                    "foreground": "g.ccBM_"
                 }
             },
             {
                 "name": "keyword-keep",
                 "scope": [
-                    "keyword.control.flow", // return...
-                    "keyword.control.conditional", // if
+                    "keyword.control.flow",
+                    "keyword.control.conditional",
                     "keyword.control.as",
                     "variable.language.super",
-                    "variable.language.this", // this
-                    "storage.type.ts", // const
-                    "storage.type.function", // def
-                    "storage.type.type", // type
-                    "storage.type.class", // class
-                    "storage.modifier.async", // async
+                    "variable.language.this",
+                    "storage.type.ts",
+                    "storage.type.function",
+                    "storage.type.type",
+                    "storage.type.class",
+                    "storage.modifier.async"
                 ],
                 "prop": {
-                    "foreground": "g.ccBM_",
+                    "foreground": "g.ccBM_"
                 }
             },
             {
                 "name": "module",
                 "scope": [
-                    // "meta.import", // entire import
                     "keyword.control.export",
                     "keyword.control.import",
                     "keyword.control.import.from",
-                    "keyword.control.from",
+                    "keyword.control.from"
                 ],
                 "prop": {
-                    "foreground": "g.ccBM_",
+                    "foreground": "g.ccBM_"
                 }
             },
             {
@@ -177,31 +173,29 @@
                     "foreground": "g.ccBRD"
                 }
             },
-            // typescript
             {
                 "name": "ts.type-alias",
                 "scope": "entity.name.type.alias.ts",
                 "prop": {
-                    "foreground": "g.ccBYL",
+                    "foreground": "g.ccBYL"
                 }
             },
             {
                 "name": "ts.extends",
                 "scope": "storage.modifier.ts",
                 "prop": {
-                    "foreground": "g.ccBM_",
+                    "foreground": "g.ccBM_"
                 }
             },
-            // python3
             {
                 "name": "py3.type",
                 "scope": [
-                    "support.type.python",
+                    "support.type.python"
                 ],
                 "prop": {
-                    "foreground": "g.ccBYL",
+                    "foreground": "g.ccBYL"
                 }
-            },
+            }
         ]
     },
     "global": {
@@ -223,6 +217,6 @@
         "g.ccBWT": "#EDF2FF",
         "g.ccDWT": "#B2B2B2",
         "g.cc_GY": "#626262",
-        "g.cc_OR": "#F99157",
+        "g.cc_OR": "#F99157"
     }
 }

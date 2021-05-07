@@ -1,8 +1,9 @@
 import sys
 import json
-from typing import Union
 import jsonc
 import xml.etree.ElementTree as ET
+
+from typing import Union
 
 
 M = ["author", "colorSpaceName", "name", "uuid"]
