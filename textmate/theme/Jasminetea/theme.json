@@ -1,0 +1,228 @@
+{
+    "author": "MamoruDS <mamoruds.io@gmail.com>",
+    "colorSpaceName": "sRGB",
+    "name": "Jasminetea",
+    "uuid": "CF231F8F-B884-4E14-A7C7-ED07DFA1E35A",
+    "settings": {
+        // "background": "#0C0C0D",
+        "background": "#19191C",
+        "foreground": "#FFFFFF",
+        "caret": "#33323B",
+        "invisibles": "#33323B",
+        "lineHighlight": "#33323B",
+        "selection": "#3A5E4A",
+        "scopes": [
+            {
+                "name": "comment",
+                "scope": "comment",
+                "prop": {
+                    "foreground": "g.cc_GY",
+                }
+            },
+            {
+                "name": "brace",
+                "scope": [
+                    "punctuation.section.dictionary",
+                    "punctuation.section.list",
+                    "punctuation.section.inheritance",
+                    "punctuation.section.arguments",
+                    "punctuation.section.brackets",
+                    "punctuation.definition.block",
+                    "punctuation.definition.parameters",
+                    "meta.brace",
+                ],
+                "prop": {
+                    "foreground": "g.ccBCY",
+                }
+            },
+            {
+                "name": "other-punctuation",
+                "scope": [
+                    "punctuation.section.block",
+                    "punctuation.separator.arguments",
+                ],
+                "prop": {
+                    "foreground": "g.ccBCY",
+                }
+            },
+            {
+                "name": "string",
+                "scope": "string",
+                "prop": {
+                    "foreground": "g.ccBGN",
+                }
+            },
+            {
+                "name": "number",
+                "scope": "constant.numeric",
+                "prop": {
+                    "foreground": "g.ccBRD",
+                }
+            },
+            {
+                "name": "boolean",
+                "scope": "constant.language.boolean",
+                "prop": {
+                    "foreground": "g.cc_OR",
+                }
+            },
+            {
+                "name": "built-in constant OR",
+                "scope": [
+                    "constant.language.null",
+                    "constant.language.python", // -> None
+                ],
+                "prop": {
+                    "foreground": "g.cc_OR",
+                }
+            },
+            {
+                "name": "built-in constant BM",
+                "scope": [
+                    "constant.language.undefined",
+                    "constant.language.null.ts",
+                ],
+                "prop": {
+                    "foreground": "g.ccBM_",
+                }
+            },
+            {
+                "name": "operator-OR",
+                "scope": [
+                    "keyword.operator.new",
+                ],
+                "prop": {
+                    "foreground": "g.cc_OR",
+                }
+            },
+            {
+                "name": "function",
+                "scope": "entity.name.function",
+                "prop": {
+                    "foreground": "g.ccBBL",
+                }
+            },
+            {
+                "name": "class",
+                // "scope": "entity.name.class",
+                "scope": [
+                    "entity.other.inherited-class",
+                    "entity.name.type.class",
+                ],
+                "prop": {
+                    "foreground": "g.ccBYL",
+                }
+            },
+            {
+                "name": "type",
+                "scope": [
+                    "entity.name.type",
+                    "meta.type.parameters",
+                    "meta.type.annotation",
+                    // "support.type"
+                ],
+                "prop": {
+                    "foreground": "g.ccBBL",
+                }
+            },
+            {
+                "name": "arrow",
+                "scope": "meta.arrow",
+                "prop": {
+                    "foreground": "g.ccBM_",
+                }
+            },
+            {
+                "name": "keyword-keep",
+                "scope": [
+                    "keyword.control.flow", // return...
+                    "keyword.control.conditional", // if
+                    "keyword.control.as",
+                    "variable.language.super",
+                    "variable.language.this", // this
+                    "storage.type.ts", // const
+                    "storage.type.function", // def
+                    "storage.type.type", // type
+                    "storage.type.class", // class
+                    "storage.modifier.async", // async
+                ],
+                "prop": {
+                    "foreground": "g.ccBM_",
+                }
+            },
+            {
+                "name": "module",
+                "scope": [
+                    // "meta.import", // entire import
+                    "keyword.control.export",
+                    "keyword.control.import",
+                    "keyword.control.import.from",
+                    "keyword.control.from",
+                ],
+                "prop": {
+                    "foreground": "g.ccBM_",
+                }
+            },
+            {
+                "name": "parameter",
+                "scope": "variable.parameter",
+                "prop": {
+                    "italic": true
+                }
+            },
+            {
+                "name": "error",
+                "scope": "support.type.exception",
+                "prop": {
+                    "foreground": "g.ccBRD"
+                }
+            },
+            // typescript
+            {
+                "name": "ts.type-alias",
+                "scope": "entity.name.type.alias.ts",
+                "prop": {
+                    "foreground": "g.ccBYL",
+                }
+            },
+            {
+                "name": "ts.extends",
+                "scope": "storage.modifier.ts",
+                "prop": {
+                    "foreground": "g.ccBM_",
+                }
+            },
+            // python3
+            {
+                "name": "py3.type",
+                "scope": [
+                    "support.type.python",
+                ],
+                "prop": {
+                    "foreground": "g.ccBYL",
+                }
+            },
+        ]
+    },
+    "global": {
+        "g.cc_BK": "",
+        "g.cc_RD": "#EF476D",
+        "g.cc_GN": "#5ADD6C",
+        "g.cc_YL": "",
+        "g.cc_BL": "",
+        "g.cc_M_": "#E694f7",
+        "g.cc_CY": "",
+        "g.cc_WT": "",
+        "g.ccBBK": "",
+        "g.ccBRD": "#FC929E",
+        "g.ccBGN": "#8DC891",
+        "g.ccBYL": "#FAC863",
+        "g.ccBBL": "#79B6F2",
+        "g.ccBM_": "#C5A5C5",
+        "g.ccBCY": "#87D7D7",
+        "g.ccBWT": "#EDF2FF",
+        "g.ccDWT": "#B2B2B2",
+        "g.cc_GY": "#626262",
+        "g.cc_OR": "#F99157",
+    }
+}
