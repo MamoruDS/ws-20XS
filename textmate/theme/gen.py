@@ -1,5 +1,6 @@
 import sys
 import json
+from typing import Union
 import jsonc
 import xml.etree.ElementTree as ET
 
@@ -13,6 +14,8 @@ S = [
     "lineHighlight",
     "selection",
 ]
+
+GLOBAL: dict[str, str] = {}
 
 
 class ScopeStyle(dict):
@@ -39,21 +42,32 @@ def add_prop(
 def add_scope(
     root: ET.Element,
     name: str,
-    scope: str,
+    scope: Union[str, list[str]],
     style: ScopeStyle,
 ) -> None:
     body = ET.SubElement(root, "dict")
     add_prop(body, "name", name)
-    add_prop(body, "scope", scope)
-    style_k = ET.SubElement(root, "key")
+    _scope: str
+    if isinstance(scope, str):
+        _scope = scope
+    else:
+        _scope = ",".join(scope)
+    add_prop(body, "scope", _scope)
+    style_k = ET.SubElement(body, "key")
     style_k.text = "settings"
-    style_v = ET.SubElement(root, "dict")
+    style_v = ET.SubElement(body, "dict")
     G = ["background", "foreground"]
     for g in G:
         try:
-            if style[g] != None:
-                add_prop(style_v, g, style[g])
+            c: str = style[g]
+            if c != None:
+                if c[:1] != "#":
+                    c = GLOBAL[c]
+                    if len(c) == 0:
+                        raise KeyError
+                add_prop(style_v, g, c)
         except KeyError:
+            # TODO: error message
             pass
     FS = ["bold", "underline", "italic"]
     font_style = []
@@ -75,6 +89,13 @@ def main() -> None:
     f = open(filepath, encoding="utf-8")
     profile = json.loads(jsonc.to_json(f.read()))
     f.close()
+
+    # load initial global color
+    try:
+        for c in profile["global"].keys():
+            GLOBAL[c] = profile["global"][c]
+    except KeyError:
+        pass
 
     body = ET.Element("plist", version="1.0")
     data = ET.SubElement(body, "dict")
