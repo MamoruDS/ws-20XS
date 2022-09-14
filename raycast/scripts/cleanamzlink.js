@@ -1,6 +1,6 @@
 // cleanAMZLink
 
-const run = async () => {
+const run = () => {
     let args, exit, out
     if (typeof Deno == 'undefined') {
         const process = require('process')
@@ -19,7 +19,7 @@ const run = async () => {
     const re = new RegExp(/(amazon[\w\.]+)\/([^\$\n]+)?dp\/([\w]+)/)
     const match = re.exec(args[0])
     if (match) {
-        out(`${match[1]}/dp/${match[3]}`)
+        out(`https://www.${match[1]}/dp/${match[3]}`)
     } else {
         exit(1)
     }
